@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>index</title>
+	<script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+</head>
+<body>
+	<div class="body">
+		姓名：<input type="text" >
+		成绩：<input type="text" >
+		<br>
+		姓名：<input type="text">
+		成绩：<input type="text">
+		<br>
+		姓名：<input type="text">
+		成绩：<input type="text">
+		<br>
+		姓名：<input type="text">
+		成绩：<input type="text">
+		<br>
+		姓名：<input type="text">
+		成绩：<input type="text">
+		<br>
+		姓名：<input type="text">
+		成绩：<input type="text">
+		<br>
+	</div>
+	<button class="cal">计算</button>
+	<button class="add">添加</button>
+	<div class="p" style="display:none"></div>
+	<script>
+	$(document).ready(function(){
+		$('.cal').on('click',function(){
+			var length=$('input').length;
+			var input=$('input');
+			var val=new Array;
+			var name=new Array;
+			var num=0,j=0;
+			for(var i=0;i<length;i++){
+				if(i%2==0){
+					name[j]=input[i].value;
+					j++;
+				}else{
+					val[num]=input[i].value;
+					num++;
+				}
+			}
+			var t,p;
+			for(i=0;i<length/2;i++){
+				for(j=0;j<length/2;j++){
+					if(val[i]>val[j]){
+						t=val[i];
+						p=name[i];
+						val[i]=val[j];
+						name[i]=name[j];
+						val[j]=t;
+						name[j]=p;
+					}
+				}
+			}
+			var p1=$('<p>姓名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;成绩：</p>');
+			$('.p').append(p1);
+			for(i=0;i<length/2;i++){
+				var p2=$('<p>'+name[i]+'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'+val[i]+'</p>');
+				$('.p').append(p2);
+			}
+			$('.p').show();
+		});
+		$('.add').on('click',function(){
+			var i=$('<p>姓名：<input type="text"/>成绩：<input type="text"/></p>');
+			$('.body').append(i);
+		});
+	});
+		</script>
+</body>
+</html>
