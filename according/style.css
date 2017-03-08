@@ -1,0 +1,41 @@
+html,body{
+	font-family: "Microsoft Yahei";
+	font-size: 16px;
+}
+div,ul,li{
+	margin:0;
+	padding: 0;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.according{
+	width: 1200px;
+	height: 450px;
+	background-color: #000;
+	margin:50px auto 0px ;
+}
+.according ul{
+	height: 100%;
+	overflow: hidden;
+}
+.according ul li{
+	float: left;
+	width: 110px;
+	overflow: hidden;
+	background-color: #000;
+	height: 100%;
+}
+.according ul li:nth-child(1){   
+	width: 540px;
+}
+.according ul li:nth-child(1) img{   
+	opacity: 1;
+}
+.according ul li img{
+	opacity: .5;
+	width: 568px;
+}
