@@ -1,0 +1,73 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: "Microsoft Yahei";
+	height: 1000px;
+}
+ul,li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+}
+.header{
+	background-color: #000;
+	overflow: hidden;
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+}
+.header .inner{
+	width: 1000px;
+	margin:0 auto;
+	height: 100px;
+}
+.header .inner h1{
+	float: left;
+}
+.header .inner .nav{
+	float: right;
+}
+.header .inner li{
+	float: left
+}
+.header .inner .nav li a{
+	color: #f0f0f0;
+	padding: 5px 20px;
+}
+.header .inner .nav li a:hover{
+	background-color: #f0f0f0;
+	color:#333;
+}
+.header.larger .inner{
+	padding:20px 0;
+}
+.header.larger .inner img{
+	width: 200px;
+}
+.header.larger .nav{
+	padding-top:40px;
+}
+.header.larger .nav li a{
+	font-size: 18px;
+}
+.header.small .inner{
+	padding:10px 0;
+	height: 80px;
+}
+.header.small .inner img{
+	width: 100px;
+}
+.header.small .nav{
+	padding-top:20px;
+}
+.header.small .nav li a{
+	font-size: 14px;
+}
+.header .inner,
+.header .inner img,
+.header .inner .nav,
+.header .inner li a{
+	transition:all 1s;
+}
