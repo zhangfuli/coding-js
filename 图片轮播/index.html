@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<!-- FKPageTransitions CSS file -->
+    <link href="css/fkpagetransitions.min.css" rel="stylesheet" />
+    <style type="text/css">
+    html,body { height: 50%; width: 50%}
+ 
+  </style>
+
+</head>
+<body>
+	<ul class="myfkpage">
+      <li><img src="img/biye1.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye2.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye3.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye4.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye5.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye6.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye7.jpg" alt="" width="100%"></li>
+      <li><img src="img/biye8.jpg" alt="" width="100%"></li>
+  </ul>
+      <button onclick="fkpage.goToPrevSlide();">上一页</button>
+      <button onclick="fkpage.goToNextSlide();">下一页</button>
+      <button onclick="shownewts();">切换效果</button>
+    <ul class="myfkpage2">
+        <li><img src="img/yundong1.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong2.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong3.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong4.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong5.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong6.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong7.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong8.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong9.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong10.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong11.jpg" alt="" width="100%"></li>
+        <li><img src="img/yundong12.jpg" alt="" width="100%"></li>
+    </ul>
+      
+    <button onclick="fkpage2.goToPrevSlide();">上一页2</button>
+    <button onclick="fkpage2.goToNextSlide();">下一页2</button>
+    <button onclick="shownewts();">切换效果2</button>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/fkpagetransitions.min.js"></script>
+  <script type="text/javascript">
+	  var fkpage,cindex = 37;
+	  function shownewts(){
+	     if (cindex<0) cindex =37;
+	     var tmp = fkpage.setSlideMode(cindex); 
+	     fkpage.goToNextSlide(); //下一页
+	     cindex --;
+	}
+  $(document).ready(function(){
+	      fkpage = $('.myfkpage').FKPageTransitions();
+      fkpage2 = $('.myfkpage2').FKPageTransitions();
+	    });
+	</script>
+</body>
+</html>
