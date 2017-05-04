@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+	body,span,a,div,canvas{
+		padding: 0;
+		margin: 0;
+	}
+	body{
+		font-size: 14px;
+		font-family: "微软雅黑";
+		background: #000;
+
+	}
+	a{
+		text-decoration: none;
+		color: #000000;
+	}
+	.box{
+		width: 710px;
+		border: 5px solid #ddd;
+		background: #fff;
+		margin-top:30px;
+	}
+	.box .title{
+		line-height: 50px;
+		background: #f90;
+		color: #fff;
+		text-align: center;
+		font-size: 24px;
+	}
+	.setting{
+		color: #333;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		background: #eee;
+	}
+	.setting .text{
+		height: 34px;
+		margin-left: 10px;
+		float: left;
+	}
+	.setting .color,.setting .bold,.setting .brush{
+		width: 30px;
+		height: 30px;
+		/*display: inline-block;*/
+		float: left;
+		border: 2px solid #fff;
+		margin-left: 10px;
+		transition:all .3s;
+	}
+	.setting .blue{
+		background: blue;
+	}
+	.setting .green{
+		background: green;
+	}
+	.setting .black{
+		background: black;
+	}
+
+	.setting .pink{
+		background: pink;
+	}
+	.setting .brush{
+		background: #fff;
+		border-color: #ddd;
+	}
+	.setting .active{
+		border-color: #f00;
+	}
+</style>
+<body>
+	<div class="box">
+		<div class="title">画图工具</div>
+		<div class="setting">
+			<span class="text">颜色：</span>
+			<a href="javascript:void(0)" class="color blue" data-color="blue"></a>
+			<a href="javascript:void(0)" class="color green" data-color="green"></a>
+			<a href="javascript:void(0)" class="color black" data-color="black"></a>
+			<a href="javascript:void(0)" class="color pink" data-color="pink"></a>
+			<span class="text">线条：</span>
+			<a href="javascript:void(0)" class="bold active" data-bold="4">4</a>
+			<a href="javascript:void(0)" class="bold" data-bold="8">8</a>
+			<a href="javascript:void(0)" class="bold" data-bold="12">12</a>
+			<a href="javascript:void(0)" class="bold" data-bold="16">16</a>
+			<span class="text">操作：</span>
+			<a href="javascript:void(0)" class="brush pen active" title="点击画图">画</a>
+			<a href="javascript:void(0)" class="brush ereaser" title="点击擦除">擦</a>
+			<a href="javascript:void(0)" class="brush clear" title="点击清除">清</a>
+		</div>
+		<canvas width="700" height="400" id="myCanvas"></canvas>
+	</div>
+
+</body>
+<script>
+	var flag;
+	var pen=true;
+	var canvas=document.getElementById("myCanvas");
+	var ctx=canvas.getContext("2d");
+	ctx.beginPath();
+	ctx.strokeStyle="rgba(255,0,0,0.5)";
+	ctx.font="30px Verdanma";//设置字体大小
+	ctx.lineWidth=4;
+	var gradient=ctx.createLinearGradient(0,0,canvas.width,0);
+	gradient.addColorStop("0","magenta");
+	gradient.addColorStop("0.5","blue");
+	gradient.addColorStop("1","red");
+	ctx.fillStyle =gradient;
+	canvas.addEventListener("mousedown",function(e){
+		if(!flag&&pen){
+		var evt =e||window.event;
+		var startX=evt.clientX-document.getElementById("myCanvas").offsetLeft;
+		var startY=evt.clientY-document.getElementById("myCanvas").offsetTop;
+		ctx.moveTo(startX,startY);
+		}
+		flag=true;
+	});
+
+	canvas.addEventListener("mousemove",function(e){
+		if(flag){
+		var evt =evt||window.event;
+		var startX=evt.clientX-document.getElementById("myCanvas").offsetLeft;
+		var startY=evt.clientY-document.getElementById("myCanvas").offsetTop;
+		ctx.lineTo(startX,startY);
+		ctx.stroke();//执行绘制命令
+		}
+	});
+	canvas.addEventListener("mouseup",function(e){
+		flag=false;
+	});
+
+	var colorTag= document.getElementsByClassName("color");
+	for(var i= 0;i<colorTag.length;i++){
+		colorTag[i].onclick=function(){
+		ctx.beginPath();
+		ctx.strokeStyle=this.getAttribute("data-color");
+		for(var j= 0;j<colorTag.length;j++)
+			colorTag[j].className=colorTag[j].className.replace("active","");
+		this.className +=" active";
+		}		
+	}
+	var boldTag= document.getElementsByClassName("bold");
+		for(var i= 0;i<boldTag.length;i++){
+		boldTag[i].onclick=function(){
+		ctx.beginPath();
+		ctx.lineWidth=this.getAttribute("data-bold");
+		for(var j= 0;j<boldTag.length;j++)
+			boldTag[j].className=boldTag[j].className.replace("active","");
+		this.className +=" active";
+		}
+	}
+	var penTag=document.getElementsByClassName("pen")[0];
+	var eraserTag=document.getElementsByClassName("ereaser")[0];
+	penTag.onclick=function(){
+		ctx.beginPath();
+		ctx.strokeStyle="rgba(255,0,0,0.5)";
+		eraserTag.className=eraserTag.className.replace("active","");
+		this.className +=" active";		
+		pen=true;
+	}
+	eraserTag.onclick=function(){
+		ctx.beginPath();
+		ctx.strokeStyle="white";
+		penTag.className=penTag.className.replace("active","");
+		this.className +=" active";		
+		pen=false;
+	}
+	document.getElementsByClassName("clear")[0].onclick=function(){
+		if(confirm("确定清除吗")){
+			ctx.beginPath();
+			ctx.clearRect(0,0,canvas.width,canvas.height);
+			ctx.stroke();
+		}
+	}
+
+</script>
+</html>

@@ -26,3 +26,6 @@
 
 ## localstorage
 #### 初识localstorage
+
+## canvas_draw
+#### canvas画板，实现画板功能
