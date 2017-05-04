@@ -23,3 +23,6 @@
 
 ## 图片轮播
 #### 图片轮播效果，多种效果轮播
+
+## localstorage
+#### 初识localstorage
