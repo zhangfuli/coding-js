@@ -1,0 +1,109 @@
+
+
+
+
+
+
+/*子页开始了*/
+
+.ziy_banner{
+    padding:0 2%
+}
+.ziy_tout{
+    padding:8.1rem 0 0 0;
+    
+}
+
+.ziy_tout .ddd{
+    border-top: solid 4px #a5aeb4;
+}
+.ziy_tout a{
+    
+    display: block;
+    padding: 2% 0 8% 0;
+    position: relative;
+    margin: 2%;
+    border-bottom: solid 1px #a5aeb4;
+}
+.ziy_tout a h1{
+    margin: 2%;
+    font-size: 1.5rem;
+    line-height: 160%;
+    color: #222222;
+    
+}
+.ziy_tout p{
+    position: absolute; 
+    left: 0;
+    bottom:8%;
+    color: #a5aeb4;
+    font-size: 1rem;
+}
+.ziy_tout span{
+    position: absolute; 
+    right: 0;
+    bottom:8%;
+    color: #a5aeb4;
+    font-size: 1rem;
+}
+
+/**/
+
+.gongg_beij{padding: 0 2%;  }
+.gongg{background: #fff; overflow: auto;}
+
+.txtMarquee-left{width: 100%; float: left; position:relative; }
+.txtMarquee-left .bd{ padding:0px; }
+.txtMarquee-left .bd .tempWrap{ width:100% !important; height: 3rem; }/* 用 !important覆盖SuperSlide自动生成的宽度，这样就可以手动控制可视宽度。 */
+.txtMarquee-left .bd ul{ overflow:hidden; zoom:1; }
+.txtMarquee-left .bd ul li{ margin-right:20px;  float:left; line-height:2rem;  text-align:left; _display:inline; 
+width:auto !important;  }/* 用 width:auto !important 覆盖SuperSlide自动生成的宽度，解决文字不衔接问题 */
+.txtMarquee-left .bd ul li:before{
+    content: "· ";font-size: 1.2rem;color: #333; 
+}
+.txtMarquee-left .bd ul li a{line-height: 3rem; font-size: 1.1rem; color: #222222;}
+
+
+.zy_news ul li dl span{
+    font-size: .8rem;
+    color: #999;
+    display: block;
+
+}
+
+.erj{
+    width: 90%;
+    padding: 5%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background: #2c8fcd;
+}
+.erj .ok a{
+    color: #fff;
+}
+.erj li{
+    float: left;
+    padding: 0 2.2%;
+}
+.erj li a{
+    font-size: 1.3rem;
+    color: #b8dbf1;
+
+}
+.erj i{
+    width: 1px;
+    height: 1.3rem;
+    background: #b8dbf1; float: left;
+}
+
+.jiaz{
+    margin: 5% 0;
+    padding:5% 0;
+    border-radius: 5px;
+    text-align: center;
+    background: #f1f1f1;
+}
+.jiaz span{
+    color: #979797;
+}

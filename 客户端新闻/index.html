@@ -1,0 +1,536 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="WangID新闻" http-equiv="keywords">
+<meta name="description" content="WangID新闻">
+<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+<title>WangID新闻</title>
+<link rel="stylesheet" href="css/index.css" type="text/css">
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/nav.js"></script><!--部分公用js-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.reveal.js"></script>
+<script src="js/sui.nav.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="js/TouchSlide.1.1.js"></script>
+</head>
+<body>
+
+<!--头部-->
+
+
+<div class="top_dingw">
+	<div class="top_bg" id="top_bg">
+		<div class="top_main">
+			<div class="top_logo">
+				<a href='index.html'><img src="images/logo.png"></a>
+			</div>
+			<div class="top_search">
+				<div class="search">
+					<a href="#" class="big-link" data-reveal-id="myModal" data-animation="fade"><img src="images/search.png"></a>
+					<div id="myModal" class="reveal-modal">
+						<div class="sousuok">
+		                    <input class="search-input" type="text" placeholder="输入关键词搜索...">
+		                    <button class="search-btn">网搜</button>
+		                    <button class="zida">直达</button>
+		                </div>
+					</div>
+				</div>
+				<div class="daoh">
+					<a href="#" class="MenuOpen btn btn-success"><img src="images/daoh.png"></a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!--新闻导航-->
+	<div class="news_dh">
+		<ul>
+			<li class="xians"><a href="index.html">首页</a></li>
+			<li class="xians"><a href="guon.html">国内</a></li>
+			<li class="xians"><a href="#">国际</a></li>
+			<li class="xians"><a href="#">社会</a></li>
+			<li class="xians"><a href="#">军事</a></li>
+			<li class="xians more subNav currentDd currentDt "><a href="#">&nbsp;</a></li>
+			<ul class="navContent">
+		    	<li><a href="#">财经</a></li>
+		    	<li><a href="#">娱乐</a></li>
+		    	<li><a href="#">体育</a></li>
+		    	<li><a href="#">科技</a></li>
+		    	<li><a href="#">教育</a></li>
+		    	<li><a href="#">健康</a></li>
+		    	<li><a href="#">女性</a></li>
+		    	<li><a href="#">汽车</a></li>
+		    	<li><a href="#">房产</a></li>
+		    	<li><a href="#">互联网</a></li>
+		    	<li><a href="#">游戏</a></li>
+		    </ul>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+		    $(".subNav").click(function(){
+		    	$(this).toggleClass("currentDd").siblings(".subNav").removeClass("currentDd")
+		    	$(this).toggleClass("currentDt").siblings(".subNav").removeClass("currentDt")
+		    	$(this).next(".navContent").slideToggle(300).siblings(".navContent").slideUp(500)
+			})	
+		})
+	</script>
+</div>
+<!--wangid导航-->
+<div id="sui_nav" class="sui-nav horizontal">
+	<div class="sui-nav-wrapper nav-line">
+		<ul>
+			<li class="dengl"><a href="#"><span>登录</span></a></li>
+			<li><a href="index.html"><span class="p1"> 新闻</span></a></li>
+			<li><a href="http://www.wangid.com/"><span class="p2">网页</span></a></li>
+			<li><a href="http://wangku.wangid.com/"><span class="p3">网酷</span></a></li>
+			<li><a href="http://mb.wangid.com/"><span class="p3">名榜</span></a></li>
+			<li><a href="http://hy.wangid.com/"><span class="p5">黄页</span></a></li>
+			<li><a href="http://tc.wangid.com/"><span class="p6">通城</span></a></li>
+		</ul> 
+	</div>
+</div>
+<div class="container ">
+	<div class="nav-second">
+	<div id="sui_nav2" class="sui-nav">
+		<script type="text/javascript">
+			document.write(document.getElementById('sui_nav').innerHTML);
+			var topbar;
+			$(function() {
+				topbar = $('#sui_nav').SuiNav({});
+				var navbar = $('#sui_nav2').SuiNav({});
+				$('.MenuToggle').click(function() {
+					console.log("toggle");
+					topbar.toggle();
+				});
+				$('.MenuOpen').click(function() {
+					console.log("open");
+					topbar.show();
+				});
+			});
+		</script>
+	</div>
+	</div>
+</div>
+<!--banner-->
+<div class="banner">
+	<div id="slideBox" class="slideBox">
+		<div class="bd">
+			<ul>
+				<li>
+					<a class="pic" href="#"><img src="images/Night00.jpg" /></a>
+					<a class="tit" href="#">汤唯新片大卖请剧组吃回锅肉</a>
+				</li>
+				<li>
+					<a class="pic" href="#"><img src="images/Night01.jpg"/></a>
+					<a class="tit" href="#">范冰冰黄晓明亲密无间</a>
+				</li>
+				<li>
+					<a class="pic" href="#"><img src="images/Night02.jpg"/></a>
+					<a class="tit" href="#">一周体育快报</a>
+				</li>
+				<li>
+					<a class="pic" href="#"><img src="images/Night03.jpg"/></a>
+					<a class="tit" href="#">金正恩携娇妻视察</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="hd">
+			<ul></ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		TouchSlide({ 
+			slideCell:"#slideBox",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			mainCell:".bd ul", 
+			effect:"leftLoop", 
+			autoPage:true,//自动分页
+			autoPlay:true,//自动播放
+		});
+	</script>
+</div>
+
+<!--内容-->
+<div class="shadow">
+	<div class="zy_news">
+		<ul>
+            <li>
+                <a href="#">
+                    <img src="images/chart.jpg">
+                    <dl>
+                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+                    </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/002.jpg">
+                    <dl>
+                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+                    </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/003.jpg">
+                    <dl>
+                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+                    </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/004.jpg">
+                    <dl>
+                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+                    </dl>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="images/003.jpg">
+                    <dl>
+                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+                    </dl>
+                </a>
+            </li>
+        </ul>    
+	</div>
+</div>
+
+<!--国内，国际，社会，新闻-->
+<div class="shadow shadow1">
+	<div id="leftTabBox" class="tabBox">
+		<div class="hd">
+			<ul>
+				<li><a>国内新闻</a></li>
+				<i class="feng"></i>
+				<li><a>国际新闻</a></li>
+				<i class="feng"></i>
+				<li><a>地方新闻</a></li>
+			</ul>
+		</div>
+		<div class="bd">
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout jianx">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">TouchSlide({ slideCell:"#leftTabBox" });</script>
+</div>
+
+
+<!--军事新闻-->
+
+<div class="shadow">
+	<div id="leftTabBox" class="tabBox">
+		<h1 class="title">军事新闻</h1>
+		<hr class="xian" />
+		<div class="bd">
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout jianx">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--财经新闻-->
+
+<div class="shadow">
+	<div id="leftTabBox" class="tabBox">
+		<h1 class="title">财经新闻</h1>
+		<hr class="xian" />
+		<div class="bd">
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout jianx">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!--娱乐明星-->
+
+<div class="shadow">
+	<div id="leftTabBox" class="tabBox">
+		<h1 class="title">娱乐明星</h1>
+		<hr class="xian" />
+		<div class="bd">
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout jianx">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!--体育健康-->
+
+<div class="shadow">
+	<div id="leftTabBox" class="tabBox">
+		<h1 class="title">体育健康</h1>
+		<hr class="xian" />
+		<div class="bd">
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout jianx">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<!--教育留学-->
+
+<div class="shadow">
+	<div id="leftTabBox" class="tabBox">
+		<h1 class="title">教育留学</h1>
+		<hr class="xian" />
+		<div class="bd">
+			<ul>
+				<li class="tout">
+	                <a href="#">
+	                    <img src="images/chart.jpg">
+	                    <dl>
+	                        <dt>南洋理工大学食堂禁用中文标识？校方：这是误解</dt>
+	                    </dl>
+	                </a>
+	                <h1>最新</h1>
+	            </li>
+	            <li class="tout jianx">
+	                <a href="#">
+	                    <img src="images/002.jpg">
+	                    <dl>
+	                        <dt>通顺的基础上，把一种语言信息转变成</dt>
+	                    </dl>
+	                </a>
+	            </li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出</a></li>
+				<li><a href="#">茂县号召挖掘机参与救援解决一切费用?政府辟谣</a></li>
+				<li><a href="#">"实干书记"沦为"风水局长":多番外出参加风水培训</a></li>
+				<li><a href="#">南洋理工大学食堂禁用中文标识？校方：这是误解</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<!--我爱看图-->
+
+<div class="teacher shadow">
+	<h1 class="title">教育留学</h1>
+	<hr class="xian" />
+	<div id="picScroll" class="picScroll">
+		<div class="bd">
+			<ul>
+				<li><a href="#"><img src="images/w001.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w002.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w003.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w004.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+			</ul>
+
+			<ul>
+				<li><a href="#"><img src="images/w001.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w002.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w003.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w004.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+			</ul>
+
+			<ul>
+				<li><a href="#"><img src="images/w001.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w002.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w003.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+				<li><a href="#"><img src="images/w004.jpg" /><span>王岐山:当好政治生态"护林员"新面貌迎接十九大</span></a></li>
+			</ul>
+		</div>		
+		<div class="hd">
+			<ul></ul>
+		</div>
+	</div>
+	<script type="text/javascript">
+		TouchSlide({ 
+			slideCell:"#picScroll",
+			titCell:".hd ul", //开启自动分页 autoPage:true ，此时设置 titCell 为导航元素包裹层
+			autoPage:true, //自动分页
+			pnLoop:"false", // 前后按钮不循环
+			switchLoad:"_src", //切换加载，真实图片路径为"_src" 
+			//autoPlay:true//自动播放
+		});
+	</script>
+</div>
+
+ 
+<!--底部-->
+<div class="endbg">
+	<div class="endmain">
+		<div class="endfoot">
+			<h2>
+				<p class="beian">京ICP备:14012449号 黔ICP证:B2-20140009号</p>
+				<p class="beian1">京公网安备：11010602030054号</p>
+			</h2>
+			<h3>
+				<p>WangID新闻搜索源于互联网新闻网站和频道</p>
+				<p>系自动分类排列, WangID不刊登或转载任何完整的新闻内容</p>
+			</h3>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
